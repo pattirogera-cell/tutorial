@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual C# y GitHub Pages</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- PORTADA APA -->
+    <header class="portada">
+        <h1>Manual: GitHub Pages y C# v5</h1>
+        <p><strong>Estudiante:</strong> Roger Patti</p>
+        <p><strong>Codigo:</strong> 256285</p>
+        <p><strong>Profesor:</strong> Ing. Robyir Loreto</p>
+        
+    </header>
+
+    <hr>
+
+    <main class="container">
+
+        <!-- MANUAL GITHUB PAGES -->
+        <section>
+            <h2>1. Manual: Publicar en GitHub Pages (HTTPS)</h2>
+            <ol>
+                <li><strong>Crear repositorio:</strong> En GitHub, crea un repositorio público (ej. <code>manual-csharp</code>).</li>
+                <li><strong>Subir archivos:</strong> Sube tu <code>index.html</code> y <code>styles.css</code>.</li>
+                <li><strong>Activar Pages:</strong> Ve a <em>Settings > Pages</em>.</li>
+                <li><strong>Desplegar:</strong> En <em>Source</em>, elige la rama <code>main</code> / <code>root</code> y guarda.</li>
+                <li><strong>URL Segura:</strong> Marca la casilla <strong>"Enforce HTTPS"</strong> para obtener el acceso seguro.</li>
+            </ol>
+        </section>
+
+        <!-- CONCEPTOS DE C# -->
+        <section>
+            <h2>2. Encapsulamiento en C#</h2>
+            <p>Es ocultar los datos internos de un objeto y permitir su acceso solo mediante métodos o propiedades autorizadas.</p>
+            
+            <h3>¿Para qué sirve?</h3>
+            <ul>
+                <li>Protege la integridad de los datos evitando cambios indebidos.</li>
+                <li>Oculta la complejidad interna de la clase.</li>
+            </ul>
+
+            <h2>3. Modificadores de Acceso (C# v5)</h2>
+
+            <!-- PUBLIC -->
+            <h3>a) public</h3>
+            <p>Accesible desde cualquier parte del programa.</p>
+<pre><code>public class Usuario {
+    public string Nombre;
+}</code></pre>
+            
+            <!-- PRIVATE -->
+            <h3>b) private</h3>
+            <p>Solo accesible dentro de la misma clase. Es la base del encapsulamiento.</p>
+<pre><code>public class Cuenta {
+    private double saldo;
+    public void Depositar(double monto) { saldo += monto; }
+}</code></pre>
+           
+
+            <!-- PROTECTED -->
+            <h3>c) protected</h3>
+            <p>Accesible dentro de su clase y en clases que la hereden (hijas).</p>
+<pre><code>public class Vehiculo {
+    protected string chasis;
+}
+public class Auto : Vehiculo {
+    public void SetChasis(string c) { chasis = c; }
+}</pre>
+            
+            <!-- INTERNAL -->
+            <h3>d) internal</h3>
+            <p>Accesible solo dentro del mismo proyecto o ensamblado (DLL).</p>
+<pre><code>internal class Config {
+    internal static string Ruta = "C:/app";
+}</code></pre>
+            
+        </section>
+    </main>
+
+</body>
+</html>
